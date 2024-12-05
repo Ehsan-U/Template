@@ -44,15 +44,15 @@ class CsvExporter(Exporter):
 class EmailNotifier(Notifier):
     
     
-    def __init__(self, service: str) -> None:
-        self.service = service
+    def __init__(self) -> None:
+        pass
 
 
     @classmethod
-    def create_notifier(cls, service: str) -> "EmailNotifier":
-        return cls(service)
+    def create_notifier(cls) -> "EmailNotifier":
+        return cls()
 
     
     def notify(self, msg: str, recipients: List[str]):
         for recipient in recipients:
-            print(f"[{self.service.capitalize()}] \nMessage: {msg}\nRecipient: {recipient}")
+            logger.info(f"[Email] \nMessage: {msg}\nRecipient: {recipient}")

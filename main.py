@@ -15,7 +15,7 @@ driver = PlaywrightDriver.create_driver(
     }
 )
 exporter = CsvExporter.create_exporter("output.csv")
-notifier = EmailNotifier.create_notifier("email")
+notifier = EmailNotifier.create_notifier()
 client = CurlCffi.create_client()
 
 

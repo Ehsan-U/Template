@@ -32,7 +32,7 @@ class Notifier(ABC):
 
     @classmethod
     @abstractmethod 
-    def create_notifier(cls, service: str) -> "Notifier":
+    def create_notifier(cls) -> "Notifier":
         ...
 
 
